@@ -1,0 +1,11 @@
+name = "workers-asset-cache"
+type = "javascript"
+
+account_id = "ACCOUNT_ID"
+workers_dev = false
+route = "static.maxratmeyer.com/*"
+kv-namespaces = [
+    { binding = "ASSETS", id = "KV_NAMESPACE_ID" }
+]
+vars = { SERVICE = "https://BUCKET.s3.amazonaws.com" }
+zone_id = "ZONE_ID"
