@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "workers-asset-cache",
   "version": "1.5.0",
   "description": "CloudFlare Workers script to proxy static content from external sources like S3 or Google Cloud Storage and cache them on Workers KV.",
