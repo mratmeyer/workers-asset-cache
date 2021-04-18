@@ -1,11 +1,20 @@
 name = "workers-asset-cache"
 type = "javascript"
 
+# Insert Cloudflare account ID from dashboard here.
 account_id = "ACCOUNT_ID"
 workers_dev = false
-route = "static.maxratmeyer.com/*"
+
+# Enter the route you want the worker to be activated on.
+route = "example.com/static/*"
+
+# Enter your Cloudflare zone ID.
+zone_id = "ZONE_ID"
+
+# You can either enter the Workers KV namespace ID here, or bind it in the Workers dashboard.
 kv-namespaces = [
     { binding = "ASSETS", id = "KV_NAMESPACE_ID" }
 ]
+
+# Enter your data source here. This could be an Amazon S3 or Google Cloud Storage bucket. Don't include trailing slash.
 vars = { SERVICE = "https://BUCKET.s3.amazonaws.com" }
-zone_id = "ZONE_ID"
