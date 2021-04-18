@@ -65,7 +65,7 @@ async function handleRequest(event) {
 	if(response.status === 200){
 		newHeaders.set('cache-control', "public, max-age=2628000");
 	} else {
-		newHeaders.set('cache-control', 'public, max-age=300');
+		newHeaders.set('cache-control', 'no-store');
 	}
 
 	// Remove the extra headers as defined above.
